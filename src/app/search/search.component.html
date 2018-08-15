@@ -1,0 +1,44 @@
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-5 control-label">Profile ID</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="userName" type="text" class="form-control" id="name" placeholder="name" name="name">
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <button class="btn btn-success" id="btn-position" type="submit" (click)="getByProfileName(userName)">Search</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+      <table class="table table-striped">
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>City</th>
+            <th>Status</th>
+            <th>Edit</th>
+          </tr>
+          <tr *ngFor="let user of users">
+            <td>{{user.profileName}}</td>
+            <td>{{user.profileType}}</td>
+            <td>{{user.address['city']}}</td>
+            <td>{{user.address['state']}}</td>
+            <td>
+              <a [routerLink]="['/update', user.profileId]">Edit</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5" *ngIf="users && users.length===0">
+              No Records Found
+            </td>
+          </tr>
+        </table>
+  </div>
+  
+</div>

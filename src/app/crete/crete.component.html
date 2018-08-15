@@ -1,0 +1,60 @@
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">FullName</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="userModel.FullName" class="form-control" id="FullName" placeholder="FullName" name="FullName">
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">Address1</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="userModel.Address1" type="text" class="form-control" id="Address1" placeholder="Address1" name="Address1">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">City</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="userModel.City" type="text" class="form-control" id="City" placeholder="City" name="City">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">Pincode</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="userModel.Pincode" type="text" class="form-control" id="Pincode" placeholder="Pincode" name="Pincode">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">ProfileType</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="userModel.ProfileType" type="text" class="form-control" id="ProfileType" placeholder="ProfileType" name="ProfileType">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">Address2</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="userModel.Address2" type="text" class="form-control" id="Address2" placeholder="Address2" name="Address2">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">State</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="userModel.State" type="text" class="form-control" id="State" placeholder="State" name="State">
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-success floating" type="submit" (click)="saveUserDetails(userModel)">Save</button>
+  </div>
+  <div class="col-md-6">
+    <button type="button" class="btn btn-default" (click)="clear()">Clear</button>
+  </div>
+</div>
