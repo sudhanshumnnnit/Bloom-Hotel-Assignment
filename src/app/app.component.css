@@ -1,0 +1,8 @@
+div#content{
+    height: 100vh;
+    border: 1px solid grey;
+}
+div h1{
+    margin-top: 20%;
+    text-align: center;
+}

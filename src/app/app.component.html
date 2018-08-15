@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <app-header [headerMessage]="message"></app-header>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <app-nav-menu></app-nav-menu>
+    </div>
+    <div class="col-md-9">
+      <div>
+        <div id="content">
+          <h1 *ngIf="message && message.default">
+            {{message.default}}
+          </h1>
+          <div style="margin-top:5%">
+            <router-outlet></router-outlet>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
